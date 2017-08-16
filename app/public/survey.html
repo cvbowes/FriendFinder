@@ -8,8 +8,200 @@
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<a href="/"><button type="button" class="btn btn-default btn-lg">Home</button></a>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-0 col-md-2">
+			</div>
+			<div class="col-sm-12 col-md-8">
+				<div class="text-center" id="main">
+					<a href="/"><button type="button" class="btn btn-default btn-lg">Home</button></a>
+					<a href="/api/friends"><button type="button" class="btn btn-default btn-lg">API Friends</button></a>
+				</div>
+
+				<div id="survey">
+				</div>
+			</div>
+
+			<div class="col-sm-0 col-md-2">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-0 col-md-2">
+			</div>
+
+			<div class="col-sm-12 col-md-8">
+				<h3>About You</h3>
+				<form role="form">
+              		<div class="form-group">
+						<label for="reserve-name">Name (Required)</label>
+						<input type="text" class="form-control" id="name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="reserve-phone">Phone Number (Required)</label>
+						<input type="number" class="form-control" id="phone" required>
+					</div>
+
+					<hr>
+
+					<div class="form-group">
+						<label for="q1">1. Your mind is always buzzing with unexplored ideas and plans.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q1" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q2">2. Generally speaking, you rely more on your experience than your imagination.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q2" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q3">3. You find it easy to stay relaxed and focused even when there is some pressure.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q3" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q4">4. You rarely do something just out of sheer curiosity.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q4" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q5">5. People can rarely upset you.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q5" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q6">6. It is often difficult for you to relate to other people’s feelings.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q6" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q7">7. In a discussion, truth should be more important than people’s sensitivities.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q7" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q8">8. You rarely get carried away by fantasies and ideas.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q8" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q9">9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q9" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<div class="form-group">
+						<label for="q10">10. YYou feel more energetic after spending time with a group of people.</label>
+						<select data-placeholder="" type="text" class="form-control chosen-select" id="q10" required>
+							<option value=""></option>
+				            <option value="1">1 (Strongly Disagree)</option>
+				            <option value="2">2</option>
+				            <option value="3">3</option>
+				            <option value="4">4</option>
+				            <option value="5">5 (Strongly Agree)</option>
+				       	</select>
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+				</form>
+			</div>
+
+			<div class="col-sm-0 col-md-2">
+			</div>
+
+		</div>
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+
+	$("#submit").on("click", function(event) {
+		event.preventDefault();
+		var scoreArray = [];
+		for (var i = 1; i < 11; i++) {
+			console.log(i + ": " + $("#q" + i).val());
+			scoreArray.push(parseInt($("#q" + i).val()));
+		};
+
+		var newUser = {
+			name: $("#name").val().trim(),
+			phone: $("#phone").val().trim(),
+			scores: scoreArray
+		};
+
+		console.log(newUser);
+
+		$.post("/api/friends", newUser, function(data) {
+			if (data) {
+				console.log("new user added to list");
+			} else {
+				console.log("user add failed");
+			}
+		});
+	});
+
+
+</script>
