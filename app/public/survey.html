@@ -33,13 +33,13 @@
 				<h3>About You</h3>
 				<form role="form">
               		<div class="form-group">
-						<label for="reserve-name">Name (Required)</label>
+						<label for="name">Name (Required)</label>
 						<input type="text" class="form-control" id="name" required>
 					</div>
 
 					<div class="form-group">
-						<label for="reserve-phone">Phone Number (Required)</label>
-						<input type="number" class="form-control" id="phone" required>
+						<label for="photo">Photo URL (Required)</label>
+						<input type="text" class="form-control" id="photo" required>
 					</div>
 
 					<hr>
@@ -173,6 +173,27 @@
 
 		</div>
 	</div>
+
+	<div id="results" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h2 id="match-name"></h2>
+	        <img id="match-img">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
 </body>
 </html>
 
@@ -188,7 +209,7 @@
 
 		var newUser = {
 			name: $("#name").val().trim(),
-			phone: $("#phone").val().trim(),
+			photo: $("#photo").val().trim(),
 			scores: scoreArray
 		};
 
@@ -196,7 +217,11 @@
 
 		$.post("/api/friends", newUser, function(data) {
 			if (data) {
-				console.log("new user added to list");
+				console.log(data.photo);
+				$("#match-name").text(data.name);
+	    		$('#match-img').attr("src", data.photo);
+
+		    	$("#results").modal('toggle');
 			} else {
 				console.log("user add failed");
 			}

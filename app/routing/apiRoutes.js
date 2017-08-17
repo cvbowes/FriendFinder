@@ -8,12 +8,9 @@ module.exports = function(app) {
 
 	app.post("/api/friends", function(req, res) {
 		var newUser = req.body;
-		
-		match(newUser);
+		res.json(match(newUser));
 
 		friends.push(newUser);
-		console.log("post request: " + friends);
-		res.json(newUser);
 	});
 }
 
@@ -36,5 +33,11 @@ function match(user) {
 	console.log("smallest diff: " + Math.min.apply(null, diffs));
 	console.log("index: " + diffs.indexOf( Math.min.apply(null, diffs)));
 	console.log("Friend: " + friends[diffs.indexOf( Math.min.apply(null, diffs))]);
+
+	var smallest = Math.min.apply(null, diffs);
+	var smIndex = diffs.indexOf(smallest);
+	var friend = friends[smIndex];
+
+	return friend;
 
 }
