@@ -2,25 +2,32 @@
 <html>
 <head>
 	<title>Furry Friend Finder</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   	<script src="https://code.jquery.com/jquery.js"></script>
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Dosis:300,500,700" rel="stylesheet">
  	<link rel="stylesheet" href="/style.css">
 
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row text-center">
-			<div class="col-xs-1 col-sm-2">
+			<div class="col-xs-0 col-sm-2">
 			</div>
-			<div class="col-xs-10 col-sm-8">
-				<div class="jumbotron">
-					<h1 class="main-title">Furry Friend Finder</h1>
-				</div>
+			<div class="col-xs-12 col-sm-8">
+
 				<div class="text-center" id="main">
-					<a href="/survey"><button type="button" class="btn btn-default btn-lg">Survey</button></a>
-					<a href="/api/friends"><button type="button" class="btn btn-default btn-lg">API Friends</button></a>
+					<h1 id="main-title">FurryFriendFinder</h1>
+					<div id="subtitle">Tired of missing out on friendships just because your loser human won't let you hang out with other pets? You're in the right place! Take the survey to get started!</div>
+					<div id="main-nav">
+						<a href="/survey"><button type="button" class="btn btn-default">Survey</button></a>
+						<a href="/api/friends"><button type="button" class="btn btn-default">API Friends</button></a>
+					</div>
 				</div>
+
 			</div>
 			<div class="col-xs-1 col-sm-2">
 			</div>

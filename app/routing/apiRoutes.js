@@ -23,16 +23,10 @@ function match(user) {
 		var diff = 0;
 		for (var j = 0; j < current.length; j++) {
 			diff += Math.abs(current[j] - user.scores[j]);
-			console.log(diff);
 		}
 
 		diffs.push(diff);
 	}
-
-	console.log(diffs);
-	console.log("smallest diff: " + Math.min.apply(null, diffs));
-	console.log("index: " + diffs.indexOf( Math.min.apply(null, diffs)));
-	console.log("Friend: " + friends[diffs.indexOf( Math.min.apply(null, diffs))]);
 
 	var smallest = Math.min.apply(null, diffs);
 	var smIndex = diffs.indexOf(smallest);
