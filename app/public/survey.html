@@ -76,7 +76,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q3">3. You find it easy to stay relaxed and focused even when there is some pressure.</label>
+						<label for="q3">3. You find it easy to stay relaxed and focused even when there is a squirrel nearby.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q3" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -100,7 +100,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q5">5. People can rarely upset you.</label>
+						<label for="q5">5. Loud noises can rarely upset you.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q5" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -112,7 +112,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q6">6. It is often difficult for you to relate to other people’s feelings.</label>
+						<label for="q6">6. You would rather be around small humans than adult humans.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q6" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -124,7 +124,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q7">7. In a discussion, truth should be more important than people’s sensitivities.</label>
+						<label for="q7">7. You go out of your way to taste all the new foods in the house even if it could get you in trouble.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q7" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -136,7 +136,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q8">8. You rarely get carried away by fantasies and ideas.</label>
+						<label for="q8">8. You are asleep more often than you are awake.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q8" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -148,7 +148,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q9">9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+						<label for="q9">9. You love riding in the car!!</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q9" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -160,7 +160,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="q10">10. You feel more energetic after spending time with a group of people.</label>
+						<label for="q10">10. You feel more energetic after spending time outside.</label>
 						<select data-placeholder="" type="text" class="form-control chosen-select" id="q10" required>
 							<option value=""></option>
 				            <option value="1">1 (Strongly Disagree)</option>
@@ -218,8 +218,6 @@
 			if (!$("#q" + i)[0].checkValidity()) {
 				return;
 			};
-
-			console.log(i + ": " + $("#q" + i).val());
 			scoreArray.push(parseInt($("#q" + i).val()));
 		};
 
