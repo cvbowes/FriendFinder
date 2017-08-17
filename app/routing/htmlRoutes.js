@@ -2,6 +2,8 @@ var express = require("express");
 var path = require("path");
 
 module.exports = function(app) {
+	app.use(express.static(path.join(__dirname, '../public')));
+	
 	app.get("/survey", function(req, res) {
 		res.sendFile(path.join(__dirname, "/../public/survey.html"));
 	});
@@ -11,6 +13,6 @@ module.exports = function(app) {
 		res.sendFile(path.join(__dirname, "/../public/home.html"));
 	});
 
-	app.use(express.static(path.join(__dirname, '../public')));
+	
 
 }

@@ -164,7 +164,7 @@
 				       	</select>
 					</div>
 
-					<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+					<button class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
 				</form>
 			</div>
 
@@ -200,12 +200,23 @@
 <script type="text/javascript">
 
 	$("#submit").on("click", function(event) {
-		event.preventDefault();
+
 		var scoreArray = [];
+		//index 0 to get HTML DOM obj from JQuery obj
+		if (!$("#name")[0].checkValidity() || !$("#photo")[0].checkValidity()) {
+			return;
+		}
+
 		for (var i = 1; i < 11; i++) {
+			if (!$("#q" + i)[0].checkValidity()) {
+				return;
+			};
+
 			console.log(i + ": " + $("#q" + i).val());
 			scoreArray.push(parseInt($("#q" + i).val()));
 		};
+
+		event.preventDefault();
 
 		var newUser = {
 			name: $("#name").val().trim(),
@@ -213,11 +224,8 @@
 			scores: scoreArray
 		};
 
-		console.log(newUser);
-
 		$.post("/api/friends", newUser, function(data) {
 			if (data) {
-				console.log(data.photo);
 				$("#match-name").text(data.name);
 	    		$('#match-img').attr("src", data.photo);
 
@@ -226,6 +234,7 @@
 				console.log("user add failed");
 			}
 		});
+
 	});
 
 
